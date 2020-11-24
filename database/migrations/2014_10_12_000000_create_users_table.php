@@ -17,7 +17,7 @@ class CreateUsersTable extends Migration
             $table->id();//int auto_incremet
             $table->string('name');//varchar
             // $table->text('') mas de 255 caracteres
-            $table->string('email')->unique();//unico
+            $table->string('email');//->unique();//unico
             $table->timestamp('email_verified_at')->nullable();//quedara vacio si no se setea
             $table->string('password');
             $table->rememberToken();//varhcar(100)
