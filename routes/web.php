@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CursoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/cursos',[CursoController::class,'index'])->name('index');
+Route::get('/cursos/create',[CursoController::class,'create'])->name('create');
+Route::get('/cursos/{curso}',[CursoController::class,'show'])->name('show');
