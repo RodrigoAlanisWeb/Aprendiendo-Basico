@@ -3,12 +3,12 @@
 @section('content')
     <h1>Todos los cursos</h1>
 
-    <a href="{{ route('create') }}">Crear Curso</a>
+    <a href="{{ route('cursos.create') }}">Crear Curso</a>
 
     <ul>
     @foreach ($cursos as $item)
         <li>
-            <a href="{{ route('show',$item->id) }}">Nombre: {{ $item->name }}</a>   
+            <a href="{{ route('cursos.show',$item->id) }}">Nombre: {{ $item->name }}</a>   
         </li>
     @endforeach
     </ul>
