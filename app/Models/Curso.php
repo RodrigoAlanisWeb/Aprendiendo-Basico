@@ -9,6 +9,13 @@ class Curso extends Model
 {
     use HasFactory;
 
-    // sin utilizar la conevncio
-    // protected $table = "users";
+    protected $fillable = [
+        'name',
+        'description',
+        'categoria'
+    ];
+
+    protected $guarded = [
+        'status'
+    ];
 }

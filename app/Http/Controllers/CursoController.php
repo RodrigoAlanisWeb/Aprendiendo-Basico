@@ -22,12 +22,7 @@ class CursoController extends Controller
 
     public function store(StoreCurso $request)
     {
-        $curso = new Curso();
-        $curso->name = $request->name;
-        $curso->description = $request->description;
-        $curso->categoria = $request->categoria;
-
-        $curso->save();
+        $curso = Curso::create($request->all());
         
         return redirect()->route('cursos.show',$curso);
     }
@@ -44,12 +39,13 @@ class CursoController extends Controller
 
     public function update (StoreCurso $request,Curso $curso)
     {
-
-        $curso->name = $request->name;
-        $curso->description = $request->description;
-        $curso->categoria = $request->categoria;
-
-        $curso->save();
+        $curso->update($request->all());
         return redirect()->route('cursos.show',$curso);
+    }
+
+    public function destroy (Curso $curso)
+    {
+        $curso->delete();
+        return redirect()->route('cursos.index');
     }
 }

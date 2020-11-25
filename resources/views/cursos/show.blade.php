@@ -10,4 +10,11 @@
     <span>
         Categoria: {{ $curso->categoria }}
     </span>
+    <br>
+    <form action="{{ route('cursos.destroy', $curso) }}" method="POST">
+        @csrf
+        @method('delete')
+        <input type="submit" class="block bg-red-600 p-1 mt-3 w-64 text-center text-white rounded-sm" value="Eliminar">
+    </form>
+    
 @endsection
