@@ -7,6 +7,17 @@
     <title>Document</title>
 </head>
 <body>
+
+    <header>
+        <h1>Cursos</h1>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Cursos</a></li>
+                <li><a href="">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
     @yield('content')
 </body>
 </html>

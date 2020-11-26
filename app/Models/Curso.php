@@ -18,4 +18,9 @@ class Curso extends Model
     protected $guarded = [
         'status'
     ];
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }
