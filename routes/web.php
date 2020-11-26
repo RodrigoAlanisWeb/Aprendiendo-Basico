@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 // Route::get('cursos',[CursoController::class,'index'])->name('cursos.index');
 
@@ -36,3 +36,5 @@ Route::get('/', function () {
 // Rutas tipo resource
 
    Route::resource('cursos',CursoController::class);
+
+   Route::view('nosotros','nosotros')->name('nosotros');

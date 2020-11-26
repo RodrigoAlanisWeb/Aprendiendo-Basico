@@ -1,7 +1,7 @@
 @extends('layout.plantilla')
 
 @section('content')
-    <h1>Aqui podras crear el curso</h1>
+    <h1 class="text-2xl mb-3 font-thin">Aqui podras crear el curso</h1>
     <form action="{{ route('cursos.store') }}" class="p-2" method="POST">
         @csrf
         <label>

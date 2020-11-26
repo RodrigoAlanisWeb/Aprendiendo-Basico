@@ -1,7 +1,7 @@
 @extends('layout.plantilla')
 
 @section('content')
-    <h1>Edicion de el Curso Llamado: {{ $curso->name }}</h1>
+    <h1 class="text-2xl mb-3 font-thin">Edicion de el Curso Llamado: {{ $curso->name }}</h1>
     <form action="{{ route('cursos.update',$curso) }}" class="p-2" method="POST">
         @csrf
 
