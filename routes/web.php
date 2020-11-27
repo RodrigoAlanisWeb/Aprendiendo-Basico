@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactanosController;
 use App\Http\Controllers\CursoController;
 use Illuminate\Support\Facades\Route;
 
@@ -38,3 +39,7 @@ Route::get('/', function () {
    Route::resource('cursos',CursoController::class);
 
    Route::view('nosotros','nosotros')->name('nosotros');
+
+   Route::get('contactanos',[ContactanosController::class,'index'])->name('contactanos.index');
+
+   Route::post('contactanos',[ContactanosController::class,'store'])->name('contactanos.store');
